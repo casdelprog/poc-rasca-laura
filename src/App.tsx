@@ -177,10 +177,10 @@ export default function App() {
       {/* Header */}
       <header className="pt-12 pb-8 px-6 text-center">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent">
-          Feliz Cumpleaños
+          ¡Feliz Cumpleaños, Laura!
         </h1>
         <p className="text-neutral-400 max-w-md mx-auto text-lg">
-          Rasca y descubrirás tu regalito
+          Rasca para descubrir tu regalito
         </p>
       </header>
 
