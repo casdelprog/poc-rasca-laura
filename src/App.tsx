@@ -16,9 +16,9 @@ export default function App() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   // Configuration
-  const brushSize = 10;
-  const revealThreshold = 90; // Percentage to auto-reveal
-  const imageUrl = "https://www.canva.com/design/DAHCEgtZ_zA/6fL8jhLZH7L4LnybzkOxtA/view?utm_content=DAHCEgtZ_zA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7dc2bc092d"; // Nota: He usado un placeholder, por favor sustituye por la URL real de tu imagen si esta no carga.
+  const brushSize = 35; // Aumentado para que sea más fácil de rascar
+  const revealThreshold = 85; // Se revela al llegar al 85%
+  const imageUrl = "./regalo.jpg"; // Asegúrate de poner tu imagen en la carpeta /public con este nombre
 
   useEffect(() => {
     const canvas = canvasRef.current;
