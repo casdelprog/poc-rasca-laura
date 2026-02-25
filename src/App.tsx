@@ -16,7 +16,7 @@ export default function App() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   // Configuration
-  const brushSize = 5; // Aumentado para que sea más fácil de rascar
+  const brushSize = 13; // Aumentado para que sea más fácil de rascar
   const revealThreshold = 70; // Se revela al llegar al 85%
   const imageUrl = "./regalo.jpg"; // Asegúrate de poner tu imagen en la carpeta /public con este nombre
 
