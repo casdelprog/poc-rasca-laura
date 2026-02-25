@@ -177,28 +177,29 @@ export default function App() {
       {/* Header */}
       <header className="pt-12 pb-8 px-6 text-center">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent">
-          ¡Feliz Cumpleaños, Laura!
+          Feliz Cumpleaños
         </h1>
         <p className="text-neutral-400 max-w-md mx-auto text-lg">
-          Rasca para descubrir tu regalito
+          Rasca y descubrirás tu regalito
         </p>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-6 pb-24">
+      <main className="max-w-5xl mx-auto px-6 pb-24">
         <div className="relative group">
           {/* Scratch Card Container */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="relative aspect-video md:aspect-[16/9] w-full rounded-3xl overflow-hidden shadow-2xl shadow-amber-900/20 border border-white/10 bg-neutral-900"
+            className={`relative aspect-[4/5] md:aspect-[1.4/1] w-full rounded-3xl overflow-hidden shadow-2xl shadow-amber-900/20 border border-white/10 bg-neutral-900 ${isRevealed ? 'cursor-pointer' : ''}`}
             ref={containerRef}
+            onClick={() => isRevealed && window.open(imageUrl, '_blank')}
           >
             {/* Hidden Image */}
             <img 
               src={imageUrl}
               alt="Hidden content"
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+              className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
               onLoad={() => setImageLoaded(true)}
               referrerPolicy="no-referrer"
             />
